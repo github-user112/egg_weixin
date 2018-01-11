@@ -7,6 +7,7 @@
     "egg": "^2.0.0",
     "egg-mysql": "^3.0.0",
     "egg-scripts": "^2.1.0",
+    "egg-view-nunjucks": "^2.1.4",
     "jssha": "^2.3.1",
     "koa-xml-body": "^2.0.0"
   },
