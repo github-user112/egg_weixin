@@ -23,13 +23,13 @@ module.exports = appInfo => {
   config.mysql = {
     client: {
       // host
-      host: '123.206.56.48',
+      host: '*****',
       // 端口号
       port: '3306',
       // 用户名
-      user: 'root',
+      user: '******',
       // 密码
-      password: '2d996368',
+      password: '******',
       // 数据库名
       database: 'weixin',
     },
