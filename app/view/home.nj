@@ -27,6 +27,7 @@
         contentType: false,
         success:(res)=>{
           console.dir(res)
+          alert('上传成功')
         }
       })
     })
