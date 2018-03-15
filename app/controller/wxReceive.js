@@ -14,8 +14,8 @@ class WxReceiveController extends Controller {
           <FromUserName><![CDATA[${req_xml.ToUserName}]]></FromUserName>
           <CreateTime>${req_xml.CreateTime}</CreateTime>
           `
-    // const result = await ctx.service.wxReceive.insert(req_xml)
-    if (1 || result.affectedRows === 1) { // 插入成功
+     const result = await ctx.service.wxReceive.insert(req_xml)
+    if (result.affectedRows === 1) { // 插入成功
       switch (req_xml.MsgType[0]) {
         case 'event':
           switch (req_xml.Event[0]) {

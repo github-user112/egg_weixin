@@ -9,4 +9,5 @@ module.exports = app => {
   router.get('/wx', controller.wx.index);
   router.post('/wx', controller.wxReceive.index);
   router.get('/wx_token', controller.wxToken.index);
+  router.post('/upload', controller.upload.index);
 };

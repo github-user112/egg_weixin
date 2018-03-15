@@ -1,35 +1,34 @@
-'use strict';
-
+'use strict'
 module.exports = appInfo => {
-  const config = exports = {};
+  const config = exports = {}
 
-  config.security={
-    csrf:{
+  config.security = {
+    csrf: {
       enable: false,
-      ignore:'/wx',
+      ignore: '/wx',
     },
   }
 
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1515146088489_1909';
+  config.keys = appInfo.name + '_1515146088489_1909'
 
   config.bodyParser = {
-    enable:false,
+    enable: false,
   }
 
   // add your config here
-  config.middleware = ['xmlParse','bodyParse'];
+  config.middleware = ['xmlParse', 'bodyParse']
 
   config.mysql = {
     client: {
       // host
-      host: '*****',
+      host: '127.0.0.1',
       // 端口号
       port: '3306',
       // 用户名
-      user: '******',
+      user: 'remote',
       // 密码
-      password: '******',
+      password: 'remote',
       // 数据库名
       database: 'weixin',
     },
@@ -39,5 +38,11 @@ module.exports = appInfo => {
     agent: false,
   }
 
-  return config;
-};
+  config.view = {
+    mapping: {
+        '.nj': 'nunjucks',
+      }
+  }
+
+  return config
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>zheshishenm</title>
+</head>
+<body>
+<div>
+  title: <input name="title" />
+  file: <input name="file" type="file" class="file" />
+  <button type="submit" class="upload-btn">上传</button>
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  $(()=>{
+    $('.upload-btn').on('click',function (e) {
+      e.preventDefault()
+      console.dir($('.file')[0])
+      var formData = new FormData();
+      formData.append('file', $('.file')[0].files[0]);
+      $.ajax({
+        type:'POST',
+        url:`/upload?_csrf={{ ctx.csrf | safe }}`,
+        data: formData,
+        processData: false,
+        contentType: false,
+        success:(res)=>{
+          console.dir(res)
+        }
+      })
+    })
+    console.log('加载完成')
+  })
+
+
+  /*window.onload = ()=>{
+
+
+  }*/
+</script>
+</body>
+</html>
