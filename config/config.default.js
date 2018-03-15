@@ -28,7 +28,7 @@ module.exports = appInfo => {
       // 用户名
       user: 'remote',
       // 密码
-      password: 'remote',
+      password: '******',
       // 数据库名
       database: 'weixin',
     },
