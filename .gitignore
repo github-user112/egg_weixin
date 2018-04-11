@@ -10,4 +10,5 @@ run/
 .DS_Store
 *.sw*
 *.un~
+.vscode/
 upload_images
